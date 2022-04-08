@@ -1,0 +1,118 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text> </help_text><element><id>UMLClass</id><coordinates><x>577</x><y>20</y><w>140</w><h>50</h></coordinates><panel_attributes>Game
+--
++ newGame()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>377</x><y>130</y><w>230</w><h>170</h></coordinates><panel_attributes>Board
+--
++ increaseLevel()
++ decreaseLevel()
++ moveBlock(Command, int mult) : bool
++ dropBlock() : int
++ setBlind(bool)
++ isCurrentHeavy() : bool
++ makeCurrentHeavy()
++ printLine(int)
++ printLineNext(int)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>280</y><w>220</w><h>140</h></coordinates><panel_attributes>TextDisplay
+--
++ notify(Cell)
++ print()
++ printLine(int)
++ printLineNext(int)
++ playAgain(string prompt)
++ specialAction() : string
++ display()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>150</y><w>220</w><h>90</h></coordinates><panel_attributes>GUI
+--
++ notify(Cell)
++ reset(int highscore)
++ updateLevel(int score, int boardNum)
++ updateScore(int level, int boardNum)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>512</x><y>390</y><w>140</w><h>80</h></coordinates><panel_attributes>Cell
+--
++ notifyObservers()
++ isOcuppied() : bool
++ getBlockType() : char
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>521</x><y>600</y><w>110</w><h>50</h></coordinates><panel_attributes>IBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>651</x><y>710</y><w>110</w><h>50</h></coordinates><panel_attributes>SBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>271</x><y>710</y><w>110</w><h>50</h></coordinates><panel_attributes>TBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>398</x><y>710</y><w>110</w><h>50</h></coordinates><panel_attributes>OBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>398</x><y>600</y><w>110</w><h>50</h></coordinates><panel_attributes>LBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>600</y><w>110</w><h>50</h></coordinates><panel_attributes>ZBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>710</y><w>110</w><h>50</h></coordinates><panel_attributes>JBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>290</y><w>90</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+grid of cells
+</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>10</y><w>110</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m1=2
+</panel_attributes><additional_attributes>90;20;10;20;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>270</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+</panel_attributes><additional_attributes>17;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>601</x><y>190</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;10;146;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>390</y><w>130</w><h>130</h></coordinates><panel_attributes>/Block/
+--
++ left() 
++ right() 
++ clockwise() 
++ counterclockwise() 
++ down()
++ up()
+/+ getType() : char/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>290</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m1=0...</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>411</x><y>380</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+
+</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>101</y><w>160</w><h>90</h></coordinates><panel_attributes>/Level/
+--
+/+ make() : Block*/
+/+ increase():/
+/+ decrease():/
+/+ getLevel() : int/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>120</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+</panel_attributes><additional_attributes>127;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>321</y><w>140</w><h>90</h></coordinates><panel_attributes>Level1
+--
++ make() : Block*
++ increase():
++ decrease():
++ getLevel() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>421</y><w>140</w><h>90</h></coordinates><panel_attributes>Level2
+--
++ make() : Block*
++ increase():
++ decrease():
++ getLevel() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>521</y><w>140</w><h>90</h></coordinates><panel_attributes>Level3
+--
++ make() : Block*
++ increase():
++ decrease():
++ getLevel() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>621</y><w>140</w><h>120</h></coordinates><panel_attributes>Level4
+--
++ make() : Block*
++ increase():
++ decrease():
++ getLevel() : int
++ makeBrown() : Block*
++ isMakeBrown() : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>180</y><w>30</w><h>510</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;490</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1008</x><y>250</y><w>100</w><h>50</h></coordinates><panel_attributes>/Observer/
+--
+/+ notify(Cell)/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>998</x><y>500</y><w>130</w><h>60</h></coordinates><panel_attributes>/Subject/
+--
++ attach(Observer*)
+# notifyObservers()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>460</y><w>450</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>430;80;10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>250</y><w>190</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>170;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1051</x><y>290</y><w>50</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=0...
+</panel_attributes><additional_attributes>10;210;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>160</y><w>90</w><h>250</h></coordinates><panel_attributes>lt=-&gt;
+creates</panel_attributes><additional_attributes>10;20;70;20;70;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>221</y><w>140</w><h>90</h></coordinates><panel_attributes>Level0
+--
++ make() : Block*
++ increase():
++ decrease():
++ getLevel() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>660</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>60</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>107;100;10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>60</y><w>310</w><h>60</h></coordinates><panel_attributes>Xwindow
+--
++ fillRectangle(int x,, int y, int width, int height, int colour)
++ drawString(int x, int y, string msg)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>110</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>640</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>640</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>640</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>670</y><w>490</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>470;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>510</y><w>30</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>230</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>560</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>460</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>360</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>260</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>660</y><w>110</w><h>50</h></coordinates><panel_attributes>BBlock
+--
++ getType() : char</panel_attributes><additional_attributes></additional_attributes></element></diagram>
